@@ -1,0 +1,64 @@
+package com.news18.desktopenglishregression;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.mongodb.connection.Server;
+import com.news18.init.DesktopCommonConfig;
+
+/**
+ * This Class Contains scripts to verify header Section of Hindi Revamp Article consumption Page.
+ * @author SanjeebKumarPati
+ * URL-https://hindi.news18.com/
+ */
+public class DesktopEnglishPhotoArticleFooterTechValidationTest extends DesktopCommonConfig {
+
+	
+	
+	/**
+	 * @author SanjeebKumarPati
+	 * This method is used to validate Line One Sections In Hindi revamp Article consumption page
+	 */
+	@Test
+	public void photo_Consumption_13_TechArticlefooterFirstLayerValidation () {
+		pages.desktopLandingPage.clickOnLineTwoTechLink();
+		pages.desktopArticleConsumptionPage.clickOnPhotoFirstArticle();
+		pages.desktopHindiRevampArticleConsumptionPage.verifyFooterFirstLayer(serverType);
+	}
+
+	
+	/**
+	 * @author SanjeebKumarPati
+	 * This method is used to validate header LiveTv Presnt on Hindi header.
+	 */
+	@Test
+	public void photo_Consumption_13_TechArticlefooterLiveTvValidation () {
+		pages.desktopLandingPage.clickOnLineTwoTechLink();
+		pages.desktopArticleConsumptionPage.clickOnPhotoFirstArticle();
+		pages.desktopLandingPage.verifyLiveTvIcon();
+	}
+	
+	/**
+	 * @author SanjeebKumarPati
+	 * This method is used to validate header LiveTv Presnt on Hindi header.
+	 */
+	@Test
+	public void photo_Consumption_13_TechArticlefooterLastLayerValidation () {
+
+		pages.desktopLandingPage.clickOnLineTwoTechLink();
+		pages.desktopArticleConsumptionPage.clickOnPhotoFirstArticle();
+		pages.desktopHindiRevampArticleConsumptionPage.verifyFooterLineTwoSocialShareSection(serverType);
+	}
+	
+	/**
+	 * @author SanjeebKumarPati
+	 * This method is used to validate header LiveTv Presnt on Hindi header.
+	 */
+	@Test
+	public void photo_Consumption_13_TechArticlefooterStickySectionValidation () {
+		pages.desktopLandingPage.clickOnLineTwoTechLink();
+		pages.desktopArticleConsumptionPage.clickOnPhotoFirstArticle();
+		pages.desktopArticleConsumptionPage.verifyStickySection();
+	}
+	
+}
